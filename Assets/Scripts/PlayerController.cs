@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class move : MonoBehaviour {
+public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 0.1f;
 	public float turnSpeed = 5f;
 
@@ -12,22 +12,22 @@ public class move : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ( Input.GetKey( KeyCode.UpArrow ) ) {
+		if ( Input.GetKey( GameController.forwardKey ) ) {
 			transform.position += transform.forward * moveSpeed;
 		}
-		if ( Input.GetKey( KeyCode.LeftArrow ) ) {
+		if ( Input.GetKey( GameController.leftKey ) ) {
 			transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
 		}
-		if ( Input.GetKey( KeyCode.RightArrow ) ) {
+		if ( Input.GetKey( GameController.rightKey ) ) {
 			transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
 		}
-		if ( Input.GetKey( KeyCode.DownArrow ) ) {
+		if ( Input.GetKey( GameController.backKey ) ) {
 			transform.position += -transform.forward * moveSpeed;
 		}
-		if ( Input.GetKey( KeyCode.A ) ) {
+		if ( Input.GetKey( GameController.upKey ) ) {
 			transform.position += transform.up * moveSpeed;
 		}
-		if ( Input.GetKey( KeyCode.D ) ) {
+		if ( Input.GetKey( GameController.downKey ) ) {
 			transform.position += -transform.up * moveSpeed;
 		}
 	}
