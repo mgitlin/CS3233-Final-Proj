@@ -49,7 +49,6 @@
      <Compile Include="Assets\Scripts\GameController.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\TeethMove.cs" />
-     <None Include="Assets\Scripts\PLACEHOLDER.txt" />
      <None Include="Assets\Sound\PLACEHOLDER.txt" />
      <None Include="Assets\Models\PLACEHOLDER.txt" />
      <None Include="Assets\Materials\PLACEHOLDER.txt" />
