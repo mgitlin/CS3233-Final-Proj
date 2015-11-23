@@ -3,12 +3,11 @@ using System.Collections;
 
 public class TeethMove : MonoBehaviour {
 	
-	public int maxSpeed;
+	public float maxSpeed = 3;
 	
 	private Vector3 startPosition;
 	// Use this for initialization
 	void Start () {
-		maxSpeed = 3;
 		startPosition = transform.position;
 	}
 	

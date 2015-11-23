@@ -3,12 +3,14 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-	public static KeyCode upKey = KeyCode.Space;
-	public static KeyCode downKey = KeyCode.LeftControl;
+	public static KeyCode upKey = KeyCode.UpArrow;
+	public static KeyCode downKey = KeyCode.DownArrow;
 	public static KeyCode forwardKey = KeyCode.W;
 	public static KeyCode backKey = KeyCode.S;
 	public static KeyCode leftKey = KeyCode.A;
 	public static KeyCode rightKey = KeyCode.D;
+	public static KeyCode pickupKey = KeyCode.I;
+	public static KeyCode dropKey = KeyCode.O;
 
 	// Use this for initialization
 	void Start () {

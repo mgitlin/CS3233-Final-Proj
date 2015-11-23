@@ -15,29 +15,6 @@ public class ButtonController : MonoBehaviour {
 		Application.Quit();
 	}
 
-	public void ChangeKey() {
-		if (this.name == "Forward Key"){
-			changeKey = true;
-			textobj.text = "Forward: Press a key";
-		}
-		/*if (this.name == "Back Key"){
-			textobj.text = "Backward: Press a key";
-		}
-		if (this.name == "Left Key"){
-			textobj.text = "Left: Press a key";
-			GameController.leftKey = KeyCode.U;
-		}
-		if (this.name == "Right Key"){
-			textobj.text = "Right: Press a key";
-		}
-		if (this.name == "Up Key"){
-			textobj.text = "Ascend: Press a key";
-		}
-		if (this.name == "Down Key"){
-			textobj.text = "Descend: Press a key";
-		}*/
-	}
-
 	// Use this for initialization
 	void Start () {
 		textobj = GetComponentInChildren<Text>();
@@ -53,13 +30,13 @@ public class ButtonController : MonoBehaviour {
 			textobj.text = "Ascend: " + GameController.upKey.ToString();
 		if (this.name == "Down Key")
 			textobj.text = "Descend: " + GameController.downKey.ToString();
+		if (this.name == "Pickup Key")
+			textobj.text = "Pick up: " + GameController.pickupKey.ToString();
+		if (this.name == "Drop Key")
+			textobj.text = "Drop: " + GameController.dropKey.ToString();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (this.name == "Left Key" && !changeKey)
-			textobj.text = "Left: " + GameController.leftKey.ToString();
-		if (this.name == "Right Key" && !changeKey)
-			textobj.text = "Right: " + GameController.rightKey.ToString();
 	}
 }
