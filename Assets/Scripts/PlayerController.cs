@@ -30,5 +30,19 @@ public class PlayerController : MonoBehaviour {
 		if ( Input.GetKey( GameController.downKey ) ) {
 			transform.position += -transform.up * moveSpeed;
 		}
+		if (Input.GetKeyDown(GameController.dropKey)) {
+			//Rigidbody crb = this.GetComponentsInChildren<Rigidbody>();
+			//crb.useGravity = true;
+			this.transform.DetachChildren();
+		}
+	}
+
+	void OnCollisionEnter (Collision hit){
+		if(hit.transform.gameObject.tag == "Pickup"){
+			if(!hit.transform.parent == this)
+				hit.transform.parent = this.transform;
+
+			hit.rigidbody.useGravity = false;
+		}
 	}
 }
