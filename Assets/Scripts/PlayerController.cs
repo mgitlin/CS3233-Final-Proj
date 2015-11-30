@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 0.1f;
 	public float turnSpeed = 5f;
+	public GameObject camCtrl;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,12 @@ public class PlayerController : MonoBehaviour {
 		}
 		if ( Input.GetKey( GameController.downKey ) ) {
 			transform.position += -transform.up * moveSpeed;
+		}
+		if (Input.GetKey(KeyCode.LeftArrow)){
+			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
+		}
+		if (Input.GetKey(KeyCode.RightArrow)){
+			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
 		}
 		if (Input.GetKeyDown(GameController.dropKey)) {
 			//Rigidbody crb = this.GetComponentsInChildren<Rigidbody>();
