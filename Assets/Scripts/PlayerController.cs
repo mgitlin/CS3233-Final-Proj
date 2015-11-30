@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour {
 			//crb.useGravity = true;
 			this.transform.DetachChildren();
 		}
+		if(GameController.tutComplete && Input.GetKey(KeyCode.Return))
+			Application.LoadLevel(3);
 	}
 
 	void OnCollisionEnter (Collision hit){
@@ -43,6 +45,13 @@ public class PlayerController : MonoBehaviour {
 				hit.transform.parent = this.transform;
 
 			hit.rigidbody.useGravity = false;
+		}
+	}
+
+	void OnTriggerEnter(Collider other) {
+		if(other.transform.gameObject.tag == "tutComplete"){
+			Debug.Log("Done!");
+			GameController.tutComplete = true;
 		}
 	}
 }
