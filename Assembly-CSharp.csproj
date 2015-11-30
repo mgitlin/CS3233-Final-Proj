@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\TeethMove.cs" />
      <Compile Include="Assets\Scripts\cubeRotate.cs" />
      <Compile Include="Assets\Scripts\leftDoorMove.cs" />
+     <Compile Include="Assets\Scripts\redGateCollide.cs" />
      <Compile Include="Assets\Scripts\rightDoorMove.cs" />
      <None Include="Assets\Sound\PLACEHOLDER.txt" />
      <None Include="Assets\Models\PLACEHOLDER.txt" />

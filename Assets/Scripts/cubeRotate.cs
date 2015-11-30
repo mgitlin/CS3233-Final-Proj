@@ -13,7 +13,7 @@ public class cubeRotate : MonoBehaviour {
 		transform.Rotate(0, 0, 20*Time.deltaTime);
 	}
 	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.name == "Drone1") {
+		if (col.gameObject.name == "Drone") {
 			col.gameObject.transform.Translate(0,0,5);
 		}
 	}

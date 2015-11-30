@@ -2,11 +2,11 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/cubeRotate.cs">
     <Files>
-      <File FileName="Assets/Scripts/leftDoorMove.cs" Line="5" Column="1" />
-      <File FileName="../../testVersion/CS3233-Final-Proj/Assets/Scripts/TeethMove.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/leftDoorMove.cs" Line="19" Column="36" />
+      <File FileName="../../testVersion/CS3233-Final-Proj/Assets/Scripts/TeethMove.cs" Line="1" Column="1" />
       <File FileName="../../testVersion/CS3233-Final-Proj/Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/rightDoorMove.cs" Line="15" Column="27" />
-      <File FileName="Assets/Scripts/cubeRotate.cs" Line="17" Column="45" />
+      <File FileName="Assets/Scripts/rightDoorMove.cs" Line="19" Column="36" />
+      <File FileName="Assets/Scripts/cubeRotate.cs" Line="16" Column="36" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

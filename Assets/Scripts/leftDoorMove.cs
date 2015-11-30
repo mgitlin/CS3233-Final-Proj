@@ -16,7 +16,7 @@ public class leftDoorMove : MonoBehaviour {
 		}
 	}
 	void OnCollisionEnter(Collision col) {
-		if (col.gameObject.name == "Drone1") {
+		if (col.gameObject.name == "Drone") {
 			collided = true;
 		}
 	}
