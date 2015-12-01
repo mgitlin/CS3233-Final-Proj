@@ -14,7 +14,7 @@ public class cubeRotate : MonoBehaviour {
 	}
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.name == "Drone") {
-			col.gameObject.transform.Translate(0,0,5);
+			col.gameObject.transform.Translate(0,0,-5);
 		}
 	}
 }
