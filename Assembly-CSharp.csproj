@@ -47,8 +47,13 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\ButtonController.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\NextLevel.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\PlayerControllerTwo.cs" />
+     <Compile Include="Assets\Scripts\SpikeMover.cs" />
      <Compile Include="Assets\Scripts\TeethMove.cs" />
+     <Compile Include="Assets\Scripts\Tilt.cs" />
+     <Compile Include="Assets\Scripts\TurnPlayerController.cs" />
      <Compile Include="Assets\Scripts\cubeRotate.cs" />
      <Compile Include="Assets\Scripts\leftDoorMove.cs" />
      <Compile Include="Assets\Scripts\redGateCollide.cs" />
