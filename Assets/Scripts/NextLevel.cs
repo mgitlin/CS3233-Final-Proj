@@ -15,7 +15,7 @@ public class NextLevel : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.name == "Drone") {
-			Application.LoadLevel(1);
+			Application.LoadLevel(3);
 		}
 	}
 }

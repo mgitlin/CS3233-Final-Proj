@@ -44,10 +44,10 @@ public class PlayerControllerTwo : MonoBehaviour {
 			transform.position += transform.forward * moveSpeed;
 		}
 		if ( Input.GetKey( GameController.leftKey ) ) {
-			transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
+			transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
 		}
 		if ( Input.GetKey( GameController.rightKey ) ) {
-			transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
+			transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
 		}
 		if ( Input.GetKey( GameController.backKey ) ) {
 			transform.position += -transform.forward * moveSpeed;
