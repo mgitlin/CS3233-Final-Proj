@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		GameController.waitTime = Random.Range(0f, 2f);
+
 		if ( Input.GetKey( GameController.forwardKey ) ) {
 			transform.position += transform.forward * moveSpeed;
 		}
