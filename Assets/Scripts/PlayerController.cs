@@ -5,6 +5,9 @@ public class PlayerController : MonoBehaviour {
 	public float moveSpeed = 0.1f;
 	public float turnSpeed = 5f;
 	public GameObject camCtrl;
+	Vector3 startPos;
+	public float shakeStrength = 0;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,6 +17,22 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GameController.waitTime = Random.Range(0f, 2f);
+		/*
+		Vector3 offsetVector = transform.right * Mathf.Sin (Time.deltaTime * 1f)
+			+ transform.up * Mathf.Sin (Time.deltaTime * 2f);
+		if(shakeStrength < -.1f || shakeStrength > .1f) {
+			shakeStrength = Random.Range(-1f,1f);
+		}
+		transform.position = transform.position + offsetVector * shakeStrength;
+		
+		// control the shaking via key press
+		if(Input.GetKeyDown(KeyCode.Space)) {
+			shakeStrength = 0.2f;
+		}
+		
+		// *decay* the shake strength
+		shakeStrength = Mathf.Clamp (shakeStrength - Time.deltaTime / 10, -1f, 1f);
+		*/
 
 		if ( Input.GetKey( GameController.forwardKey ) ) {
 			transform.position += transform.forward * moveSpeed;

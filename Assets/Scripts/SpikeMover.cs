@@ -25,15 +25,15 @@ public class SpikeMover : MonoBehaviour {
 		//Debug.log();
 		if(direction.ToLower() == "y") {
 			if(transform.position.y - originPos.y < maxChange && reset == true && curTime > waitTime) {
-				transform.position += new Vector3(0f, extend, 0f);
+				transform.position += transform.up * extend; 
 			}else if(transform.position.y > originPos.y && curTime > waitTime){
 				reset = false;
 				//newYMove = originPos.y -  
-				transform.position += new Vector3(0f, -retract, 0f);
+				transform.position -= transform.up * retract;
 			} else if(curTime > waitTime) {
 				reset = true;
 				curTime = 0f;
-				waitTime = GameController.waitTime;
+				waitTime = Random.Range(0f, 2f);
 			}
 		}
 		if(direction.ToLower() == "-y") {
@@ -46,7 +46,7 @@ public class SpikeMover : MonoBehaviour {
 			} else if(curTime > waitTime) {
 				reset = true;
 				curTime = 0f;
-				waitTime = GameController.waitTime;
+				waitTime = Random.Range(0f, 2f);
 			}
 		}
 		
