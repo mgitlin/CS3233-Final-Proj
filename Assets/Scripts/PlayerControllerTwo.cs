@@ -69,7 +69,7 @@ public class PlayerControllerTwo : MonoBehaviour {
 			//crb.useGravity = true;
 			this.transform.DetachChildren();
 		}
-		if(GameController.tutComplete && Input.GetKey(KeyCode.Return))
+		if(GameController.levelComplete && Input.GetKey(KeyCode.Return))
 			Application.LoadLevel(3);
 	}
 	
@@ -85,7 +85,7 @@ public class PlayerControllerTwo : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.transform.gameObject.tag == "tutComplete"){
 			Debug.Log("Done!");
-			GameController.tutComplete = true;
+			GameController.levelComplete = true;
 		}
 	}
 }

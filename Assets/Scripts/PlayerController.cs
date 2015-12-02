@@ -42,8 +42,11 @@ public class PlayerController : MonoBehaviour {
 			//crb.useGravity = true;
 			this.transform.DetachChildren();
 		}
-		if(GameController.tutComplete && Input.GetKey(KeyCode.Return))
-			Application.LoadLevel(3);
+		if (GameController.levelComplete && Input.GetKey (KeyCode.Return)) {
+			GameController.currentLevel++;
+			Application.LoadLevel(GameController.currentLevel);
+			GameController.levelComplete = false;
+		}
 	}
 
 	void OnCollisionEnter (Collision hit){
@@ -58,7 +61,7 @@ public class PlayerController : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if(other.transform.gameObject.tag == "tutComplete"){
 			Debug.Log("Done!");
-			GameController.tutComplete = true;
+			GameController.levelComplete = true;
 		}
 	}
 }

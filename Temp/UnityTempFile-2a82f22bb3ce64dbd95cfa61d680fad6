@@ -3,10 +3,8 @@
 -nowarn:0169
 -out:'Temp/Assembly-CSharp.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll'
--r:'/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -r:'/Applications/Unity/Unity.app/Contents/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -define:UNITY_5_2_1
@@ -77,10 +75,12 @@
 'Assets/Scripts/PlayerController.cs'
 'Assets/Scripts/PlayerControllerTwo.cs'
 'Assets/Scripts/SpikeMover.cs'
+'Assets/Scripts/Spinners.cs'
 'Assets/Scripts/TeethMove.cs'
 'Assets/Scripts/Tilt.cs'
 'Assets/Scripts/TurnPlayerController.cs'
 'Assets/Scripts/cubeRotate.cs'
 'Assets/Scripts/leftDoorMove.cs'
+'Assets/Scripts/nextLevelTwo.cs'
 'Assets/Scripts/redGateCollide.cs'
 'Assets/Scripts/rightDoorMove.cs'

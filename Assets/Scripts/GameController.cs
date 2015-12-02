@@ -12,7 +12,9 @@ public class GameController : MonoBehaviour {
 	public static KeyCode pickupKey = KeyCode.I;
 	public static KeyCode dropKey = KeyCode.O;
 
-	public static bool tutComplete = false;
+	public static bool levelComplete = false;
+
+	public static int currentLevel = 2;
 
 	// Use this for initialization
 	void Start () {
