@@ -38,11 +38,11 @@ public class SpikeMover : MonoBehaviour {
 		}
 		if(direction.ToLower() == "-y") {
 			if(transform.position.y - originPos.y > maxChange && reset == true && curTime > waitTime) {
-				transform.position += new Vector3(0f, -extend, 0f);
+				transform.position += transform.up * extend;
 			}else if(transform.position.y < originPos.y && curTime > waitTime){
 				reset = false;
 				//newYMove = originPos.y -  
-				transform.position += new Vector3(0f, retract, 0f);
+				transform.position -= transform.up * retract;
 			} else if(curTime > waitTime) {
 				reset = true;
 				curTime = 0f;

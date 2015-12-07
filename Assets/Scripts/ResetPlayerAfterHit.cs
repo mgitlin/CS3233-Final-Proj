@@ -2,7 +2,9 @@
 using System.Collections;
 
 public class ResetPlayerAfterHit : MonoBehaviour {
-	public float resetVal;
+	public float resetValx;
+	public float resetValy;
+	public float resetValz;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +18,7 @@ public class ResetPlayerAfterHit : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.name == "Drone") {
-			col.gameObject.transform.Translate(0,0,resetVal);
+			col.gameObject.transform.Translate(resetValx,resetValy,resetValz);
 		}
 	}
 }
