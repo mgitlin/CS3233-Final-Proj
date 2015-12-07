@@ -64,11 +64,6 @@ public class PlayerControllerTwo : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)){
 			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
 		}
-		if (Input.GetKeyDown(GameController.dropKey)) {
-			//Rigidbody crb = this.GetComponentsInChildren<Rigidbody>();
-			//crb.useGravity = true;
-			this.transform.DetachChildren();
-		}
 		if(levelComplete && Input.GetKey(KeyCode.Return)) {
 			GameController.currentLevel++;
 			Application.LoadLevel(GameController.currentLevel);
@@ -77,22 +72,10 @@ public class PlayerControllerTwo : MonoBehaviour {
 	}
 
 	void OnCollisionEnter (Collision hit){
-		if(hit.transform.gameObject.tag == "Pickup"){
-			if (hit.transform.name == "pCube25") {
-				Debug.Log("done!");
-				levelComplete = true;
-			}
-			if(!hit.transform.parent == this)
-				hit.transform.parent = this.transform;
-			
-			hit.rigidbody.useGravity = false;
-		}
-	}
-	
-	void OnTriggerEnter(Collider other) {
-		if(other.transform.gameObject.tag == "tutComplete"){
+		if(hit.transform.gameObject.tag == "levelComplete"){
 			Debug.Log("Done!");
-			GameController.levelComplete = true;
+			levelComplete = true;
 		}
 	}
+
 }
