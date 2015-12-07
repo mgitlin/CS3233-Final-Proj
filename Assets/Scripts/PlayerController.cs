@@ -8,11 +8,9 @@ public class PlayerController : MonoBehaviour {
 	Vector3 startPos;
 	public float shakeStrength = 0;
 
+	private bool levelComplete = false;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+	void Start () {}
 	
 	// Update is called once per frame
 	void Update () {
@@ -76,6 +74,10 @@ public class PlayerController : MonoBehaviour {
 				hit.transform.parent = this.transform;
 
 			hit.rigidbody.useGravity = false;
+		}
+		if(hit.transform.gameObject.tag == "tutComplete"){
+			Debug.Log("Done!");
+			GameController.levelComplete = true;
 		}
 	}
 
