@@ -10,7 +10,7 @@ public class PlayerControllerTwo : MonoBehaviour {
 	public GameObject leftDoor;
 	public GameObject camCtrl;
 	public float doorSlide = 5f;
-
+	private bool levelComplete = false;
 
 	Vector3 rightOriginPos;
 	Vector3 leftOriginPos;
@@ -69,12 +69,19 @@ public class PlayerControllerTwo : MonoBehaviour {
 			//crb.useGravity = true;
 			this.transform.DetachChildren();
 		}
-		if(GameController.levelComplete && Input.GetKey(KeyCode.Return))
-			Application.LoadLevel(3);
-	}
+		if(levelComplete && Input.GetKey(KeyCode.Return)) {
+			GameController.currentLevel++;
+			Application.LoadLevel(GameController.currentLevel);
 	
+		}
+	}
+
 	void OnCollisionEnter (Collision hit){
 		if(hit.transform.gameObject.tag == "Pickup"){
+			if (hit.transform.name == "pCube25") {
+				Debug.Log("done!");
+				levelComplete = true;
+			}
 			if(!hit.transform.parent == this)
 				hit.transform.parent = this.transform;
 			

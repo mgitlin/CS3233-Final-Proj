@@ -31,7 +31,7 @@ public class ButtonController : MonoBehaviour {
 		if (this.name == "Down Key")
 			textobj.text = "Descend: " + GameController.downKey.ToString();
 		if (this.name == "Pickup Key")
-			textobj.text = "Pick up: " + GameController.pickupKey.ToString();
+			textobj.text = "Pick up: collide with";
 		if (this.name == "Drop Key")
 			textobj.text = "Drop: " + GameController.dropKey.ToString();
 	}
