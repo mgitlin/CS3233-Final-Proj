@@ -10,8 +10,8 @@ public class PlayerController : MonoBehaviour {
 
 	private bool levelComplete = false;
 
-	void Start () {}
-	
+	void Start () {levelComplete = false;}
+		
 	// Update is called once per frame
 	void Update () {
 		GameController.waitTime = Random.Range(0f, 2f);
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)){
 			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
 		}
-		if (GameController.levelComplete && Input.GetKey (KeyCode.Return)) {
+		if (levelComplete && Input.GetKey (KeyCode.Return)) {
 			GameController.currentLevel++;
 			Application.LoadLevel(GameController.currentLevel);
 		}

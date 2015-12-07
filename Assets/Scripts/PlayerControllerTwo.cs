@@ -18,6 +18,7 @@ public class PlayerControllerTwo : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		levelComplete = false;
 		//doors = new GameObject[2];
 		rightOriginPos = rightDoor.transform.position;
 		leftOriginPos = leftDoor.transform.position;
