@@ -4,7 +4,7 @@ using System.Collections;
 public class cubeRotate : MonoBehaviour {
 
 	// Use this for initialization
-	public float rotationSpeed;
+	public float rotationSpeed = 10;
 	void Start () {
 	
 	}
