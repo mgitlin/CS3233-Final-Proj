@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
@@ -9,6 +9,11 @@ public class ButtonController : MonoBehaviour {
 
 	public void LoadScene( int scene) {
 		Application.LoadLevel(scene);
+	}
+
+	public void ToMainMenu () {
+		GameController.currentLevel = 2;
+		Application.LoadLevel(0);
 	}
 
 	public void ExitApp () {
