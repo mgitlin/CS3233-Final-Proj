@@ -12,6 +12,8 @@ public class PlayerControllerTwo : MonoBehaviour {
 	public float doorSlide = 5f;
 	private bool levelComplete = false;
 
+	public GameObject popUp;
+
 	Vector3 rightOriginPos;
 	Vector3 leftOriginPos;
 
@@ -75,6 +77,7 @@ public class PlayerControllerTwo : MonoBehaviour {
 	void OnCollisionEnter (Collision hit){
 		if(hit.transform.gameObject.tag == "levelComplete"){
 			Debug.Log("Done!");
+			popUp.SetActive(true);
 			levelComplete = true;
 		}
 	}

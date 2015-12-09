@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
 	public GameObject camCtrl;
 	Vector3 startPos;
 	public float shakeStrength = 0;
+	public GameObject popUp;
 
 	private bool levelComplete = false;
 
@@ -65,6 +66,7 @@ public class PlayerController : MonoBehaviour {
 	void OnCollisionEnter (Collision hit){
 		if(hit.transform.gameObject.tag == "levelComplete"){
 			Debug.Log("Done!");
+			popUp.SetActive(true);
 			levelComplete = true;
 		}
 	}
