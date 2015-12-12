@@ -4,9 +4,9 @@ using System.Collections;
 public class cubeRotate : MonoBehaviour {
 
 	// Use this for initialization
-	public float rotationSpeed = 10;
+	public float rotationSpeed;
 	void Start () {
-	
+		rotationSpeed = 10;
 	}
 	
 	// Update is called once per frame

@@ -33,23 +33,30 @@ public class PlayerController : MonoBehaviour {
 		shakeStrength = Mathf.Clamp (shakeStrength - Time.deltaTime / 10, -1f, 1f);
 		*/
 
+		// check the key being pressed and move the player accordingly
 		if ( Input.GetKey( GameController.forwardKey ) ) {
 			transform.position += transform.forward * moveSpeed;
+			GameController.moveZ = "forward";
 		}
 		if ( Input.GetKey( GameController.leftKey ) ) {
 			transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
+			GameController.moveX = "left";
 		}
 		if ( Input.GetKey( GameController.rightKey ) ) {
 			transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
+			GameController.moveX = "right";
 		}
 		if ( Input.GetKey( GameController.backKey ) ) {
 			transform.position += -transform.forward * moveSpeed;
+			GameController.moveZ = "back";
 		}
 		if ( Input.GetKey( GameController.upKey ) ) {
 			transform.position += transform.up * moveSpeed;
+			GameController.moveY = "up";
 		}
 		if ( Input.GetKey( GameController.downKey ) ) {
 			transform.position += -transform.up * moveSpeed;
+			GameController.moveY = "down";
 		}
 		if (Input.GetKey(KeyCode.LeftArrow)){
 			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
@@ -57,6 +64,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetKey(KeyCode.RightArrow)){
 			camCtrl.transform.Rotate(0.0f, Input.GetAxis("Horizontal") * turnSpeed, 0.0f);;
 		}
+
+		// check if the level is done and if the player has pressed the key necessary to move on
 		if (levelComplete && Input.GetKey (KeyCode.Return)) {
 			GameController.currentLevel++;
 			Application.LoadLevel(GameController.currentLevel);

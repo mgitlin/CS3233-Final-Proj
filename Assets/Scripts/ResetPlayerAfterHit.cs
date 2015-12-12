@@ -19,6 +19,7 @@ public class ResetPlayerAfterHit : MonoBehaviour {
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.name == "Drone") {
 			col.gameObject.transform.Translate(resetValx,resetValy,resetValz);
+			//col.gameObject.transform.position = transform.forward*-1 * 5;
 		}
 	}
 }

@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour {
 	public static KeyCode pickupKey = KeyCode.I;
 	public static KeyCode dropKey = KeyCode.O;
 	public static float waitTime = 0.0f;
+	public static string moves = "forward";
+	public static string moveX = "right";
+	public static string moveY = "up";
+	public static string moveZ = "forward";
 
 	public static bool levelComplete = false;
 
