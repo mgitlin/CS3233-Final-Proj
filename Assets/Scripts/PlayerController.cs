@@ -38,13 +38,26 @@ public class PlayerController : MonoBehaviour {
 			transform.position += transform.forward * moveSpeed;
 			GameController.moveZ = "forward";
 		}
-		if ( Input.GetKey( GameController.leftKey ) ) {
-			transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
-			GameController.moveX = "left";
-		}
-		if ( Input.GetKey( GameController.rightKey ) ) {
-			transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
-			GameController.moveX = "right";
+
+		if (this.transform.tag != "tunnel") {
+			if ( Input.GetKey( GameController.leftKey ) ) {
+				transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
+				GameController.moveX = "left";
+			}
+			if ( Input.GetKey( GameController.rightKey ) ) {
+				transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
+				GameController.moveX = "right";
+			}
+		} else {
+			if ( Input.GetKey( GameController.rightKey ) ) {
+				transform.position = transform.position + new Vector3( -moveSpeed, 0f, 0f);
+				GameController.moveX = "right";
+			}
+			if ( Input.GetKey( GameController.leftKey ) ) {
+				transform.position = transform.position + new Vector3( moveSpeed, 0f, 0f);
+				GameController.moveX = "left";
+			}
+		
 		}
 		if ( Input.GetKey( GameController.backKey ) ) {
 			transform.position += -transform.forward * moveSpeed;
